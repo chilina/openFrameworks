@@ -1382,3 +1382,12 @@ void ofTrueTypeFont::drawStringAsShapes(const string& str, float x, float y) con
 std::size_t ofTrueTypeFont::getNumCharacters() const{
 	return cps.size();
 }
+
+//-----------------------------------------------------------
+size_t ofTrueTypeFont::getNumFaces() {
+    if(face == nullptr){
+        return 0;
+    } else {
+        return static_cast<size_t>(face->num_faces);
+    }
+}

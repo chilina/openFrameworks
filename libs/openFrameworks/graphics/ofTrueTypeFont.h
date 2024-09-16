@@ -377,6 +377,11 @@ public:
 		return getGlyphProperties(c).advance;
 	}
 
+	/// \brief get the number of styles (bold, italic, etc) available within a font
+	/// returns 0 if face == nullptr (ie the font didn't load)
+
+	size_t getNumFaces();
+
 	static double int26p6_to_dbl(long p) {
 		return double(p) / 64.0;
 	}

@@ -379,8 +379,11 @@ public:
 
 	/// \brief get the number of styles (bold, italic, etc) available within a font
 	/// returns 0 if face == nullptr (ie the font didn't load)
-
 	size_t getNumFaces();
+
+	/// \brief get the current face index for a font; bits 0-15 of the value in the struct hold the value of the index
+	/// returns 0 if face == nullptr (ie the font didn't load)
+	size_t getFaceIndex();
 
 	static double int26p6_to_dbl(long p) {
 		return double(p) / 64.0;

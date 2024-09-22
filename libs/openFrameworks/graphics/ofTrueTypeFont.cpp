@@ -1384,7 +1384,7 @@ std::size_t ofTrueTypeFont::getNumCharacters() const{
 }
 
 //-----------------------------------------------------------
-size_t ofTrueTypeFont::getNumFaces() {
+size_t ofTrueTypeFont::getIndexSize() {
     if(face != nullptr){
         return static_cast<size_t>(face->num_faces);
     } else {
@@ -1393,7 +1393,7 @@ size_t ofTrueTypeFont::getNumFaces() {
 }
 
 //-----------------------------------------------------------
-size_t ofTrueTypeFont::getFaceIndex() {
+size_t ofTrueTypeFont::getIndex() {
     if(face != nullptr){
         return static_cast<size_t>(face->face_index & 0xffff);
     } else {

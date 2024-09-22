@@ -377,13 +377,13 @@ public:
 		return getGlyphProperties(c).advance;
 	}
 
-	/// \brief get the number of styles (bold, italic, etc) available within a font
+	/// \brief get face->num_faces, which is the number of different styles (bold, italic, etc) available within a font
 	/// returns 0 if face == nullptr (ie the font didn't load)
-	size_t getNumFaces();
+	size_t getIndexSize();
 
-	/// \brief get the current face index for a font; bits 0-15 of the value in the struct hold the value of the index
+	/// \brief get face->face_index, which is the current index (or face) for a font; bits 0-15 of the value in the struct hold the value of the index
 	/// returns 0 if face == nullptr (ie the font didn't load)
-	size_t getFaceIndex();
+	size_t getIndex();
 
 	static double int26p6_to_dbl(long p) {
 		return double(p) / 64.0;
